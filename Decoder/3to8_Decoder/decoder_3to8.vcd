@@ -1,0 +1,41 @@
+$date
+	Mon Feb  6 01:44:32 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module decoder_3to8_tb $end
+$var wire 8 ! O [7:0] $end
+$var reg 3 " I [2:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 "
+b10000000 !
+$end
+#5
+b1000000 !
+b1 "
+#10
+b100000 !
+b10 "
+#15
+b10000 !
+b11 "
+#20
+b1000 !
+b100 "
+#25
+b100 !
+b101 "
+#30
+b10 !
+b110 "
+#35
+b1 !
+b111 "
+#40
