@@ -1,0 +1,31 @@
+$date
+	Sun Feb  5 23:27:51 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module xnorg_tb $end
+$var wire 1 ! Y $end
+$var reg 1 " A $end
+$var reg 1 # B $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0#
+0"
+1!
+$end
+#5
+0!
+1#
+#10
+0#
+1"
+#15
+1!
+1#
+#20
