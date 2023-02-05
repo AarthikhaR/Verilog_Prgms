@@ -1,0 +1,41 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x55b6ab772df0 .scope module, "decoder_2to4_str" "decoder_2to4_str" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "EN";
+    .port_info 1 /INPUT 1 "A1";
+    .port_info 2 /INPUT 1 "A0";
+    .port_info 3 /OUTPUT 1 "D3";
+    .port_info 4 /OUTPUT 1 "D2";
+    .port_info 5 /OUTPUT 1 "D1";
+    .port_info 6 /OUTPUT 1 "D0";
+o0x7f73a21d3048 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x55b6ab7bba20 .functor NOT 1, o0x7f73a21d3048, C4<0>, C4<0>, C4<0>;
+o0x7f73a21d3018 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x55b6ab7bbae0 .functor NOT 1, o0x7f73a21d3018, C4<0>, C4<0>, C4<0>;
+L_0x55b6ab7bbbb0 .functor AND 1, L_0x55b6ab7bba20, L_0x55b6ab7bbae0, C4<1>, C4<1>;
+L_0x55b6ab7bbca0 .functor AND 1, L_0x55b6ab7bba20, o0x7f73a21d3018, C4<1>, C4<1>;
+L_0x55b6ab7bbd90 .functor AND 1, o0x7f73a21d3048, L_0x55b6ab7bbae0, C4<1>, C4<1>;
+L_0x55b6ab7bbe50 .functor AND 1, o0x7f73a21d3048, o0x7f73a21d3018, C4<1>, C4<1>;
+v0x55b6ab773030_0 .net "A0", 0 0, o0x7f73a21d3018;  0 drivers
+v0x55b6ab7bb310_0 .net "A1", 0 0, o0x7f73a21d3048;  0 drivers
+v0x55b6ab7bb3d0_0 .net "D0", 0 0, L_0x55b6ab7bbbb0;  1 drivers
+v0x55b6ab7bb470_0 .net "D1", 0 0, L_0x55b6ab7bbca0;  1 drivers
+v0x55b6ab7bb530_0 .net "D2", 0 0, L_0x55b6ab7bbd90;  1 drivers
+v0x55b6ab7bb640_0 .net "D3", 0 0, L_0x55b6ab7bbe50;  1 drivers
+o0x7f73a21d3138 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55b6ab7bb700_0 .net "EN", 0 0, o0x7f73a21d3138;  0 drivers
+v0x55b6ab7bb7c0_0 .net "x", 0 0, L_0x55b6ab7bbae0;  1 drivers
+v0x55b6ab7bb880_0 .net "y", 0 0, L_0x55b6ab7bba20;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "2to4_Decoder_str.v";
