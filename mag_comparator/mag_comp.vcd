@@ -1,0 +1,31 @@
+$date
+	Mon Feb  6 12:20:15 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module mgc_tb $end
+$var wire 1 ! AltB $end
+$var wire 1 " AgtB $end
+$var wire 1 # AeqB $end
+$var reg 4 $ A [3:0] $end
+$var reg 4 % B [3:0] $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 %
+b0 $
+1#
+0"
+0!
+$end
+#5
+1"
+0#
+b1 %
+b100 $
+#10
